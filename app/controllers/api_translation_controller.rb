@@ -3,6 +3,11 @@ require 'json'
 
 class ApiTranslationController < BaseApiController
 
+	api :POST, "/translate/full/", "Use this API to get translation"
+    error :code => 401, :desc => "Unauthorized. Details don't match with any device in the database"
+    param :word, String, 'translated word',:required => true
+    param :sl, String, 'original language', :required => true
+    param :tl, String, 'translation language', :required => true
 	def full_translation
 
 		@word = params[:word]
