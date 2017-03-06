@@ -48,4 +48,9 @@ end
 
 gem 'httparty'
 gem 'puma'
+gem 'active_model_serializers', '0.9.3'
+gem 'devise'
+group :test, :staging, :development do
+	gem 'apipie-rails'
+end
 
