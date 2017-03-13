@@ -50,6 +50,8 @@ gem 'httparty'
 gem 'puma'
 gem 'active_model_serializers', '0.9.3'
 gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth'
 group :test, :staging, :development do
 	gem 'apipie-rails'
 end
